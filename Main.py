@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import ImageTk, Image
+from tkinter import messagebox
 
 #Creacion de Tk y Toplevel
 root = Tk()
@@ -39,7 +40,7 @@ al boton de un estudiante, y asi poder eliminar ambas instancias una vez se apre
 """""
 antecedente=0
 Estudiante_x_Button_= [0]
-for i in range(len(triples)):
+for i in range(len(triples)+1):
     Estudiante_x_Button_.append(0)
 #Funciones
 def calculo_promedio():
@@ -100,14 +101,17 @@ def crear_label(Y, numero_estudiante, nota_estudiante):
         Nota_estudiante_Entry.place(x=150,y=Y,width=20)
         def Aceptar():
             global triples, antecedente, Estudiante_x_Button_
-            antecedente=1
-            triples[numero_estudiante][2]=Nota.get()
-            Nota_estudiante_Label.configure(text=Nota.get())
-            Nota_estudiante_Label.place(x=150,y=Y)
-            Nota_estudiante_Entry.destroy()
-            Button_Aceptar.destroy()
-            Estudiante_x_Button_[numero_estudiante] = Button(frame_notas, text='Cambiar',command=Cambiar, fg='white',bg='black', font=('Open Sans',10),width=10)
-            Estudiante_x_Button_[numero_estudiante].place(x=245,y=Y-3)
+            if Nota.get() in range(0,5):
+                antecedente=1
+                triples[numero_estudiante-1][2]=Nota.get()
+                Nota_estudiante_Label.configure(text=Nota.get())
+                Nota_estudiante_Label.place(x=150,y=Y)
+                Nota_estudiante_Entry.destroy()
+                Button_Aceptar.destroy()
+                Estudiante_x_Button_[numero_estudiante] = Button(frame_notas, text='Cambiar',command=Cambiar, fg='white',bg='black', font=('Open Sans',10),width=10)
+                Estudiante_x_Button_[numero_estudiante].place(x=245,y=Y-3)
+            else:
+                messagebox.showinfo('Value Error','Debe ingresar un valor entre 0 y 5')
         Button_Aceptar= Button(frame_notas, text="Aceptar",command=Aceptar, fg='white',bg='black', font=('Open Sans',11))
         Button_Aceptar.place(x=260,y=Y-3)
     Estudiante_x_Button = Button(frame_notas, text='Cambiar',command=Cambiar, fg='white',bg='black', font=('Open Sans',10),width=10)
@@ -116,7 +120,7 @@ def crear_label(Y, numero_estudiante, nota_estudiante):
     #frame imagen
 frame_imagen= Frame(window, width=450, height=510,relief=RAISED)
 frame_imagen.place(x=0,y=0)
-img = ImageTk.PhotoImage(Image.open(r'C:\Users\Agus\Downloads\curso.jpg'))
+img = ImageTk.PhotoImage(Image.open(r'C:\Users\Agus\Downloads\Code\Curso\curso.jpg'))
 panel = Label(frame_imagen, image = img, relief=SUNKEN)
 panel.place(x=0,y=0)
 panel.image = img
@@ -140,4 +144,3 @@ Boton_Mayor_al_promedio = Button(frame_botones, command=Mayor_al_Promedio, text=
 Boton_Mayor_al_promedio.pack(side=LEFT)            
 
 root.mainloop()
-
