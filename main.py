@@ -42,25 +42,22 @@ def crearLabel():
         label.place(x=x, y=r)
         r += 30
     return listalabels
+
 def modificar(i):
-    def  aceptar :
+        def aceptar():
+            cambiarnot.get()
 
-        cambiar=cambiarnot.get()
+        window2 = Tk()
+        window2.geometry("200x200")
+        btnCambiar = Button(window2, width="14", height="1", text="Aceptar", command=aceptar)
+        btnCambiar.place(x=20, y=30)
+        cambiarnot = Entry(window2)
+        cambiarnot.configure(width="11")
+        cambiarnot.place(x=40, y=30)
 
+        window2.title("ESTUDIANTES")
+        window2.resizable(0, 0)
 
-
-
-
-
-    window2 = Tk()
-    window2.title("ESTUDIANTES")
-    window2.resizable(0, 0)
-    window2.geometry("200x200")
-    btnCambiar = Button(window2, width="14", height="1", text="Aceptar", command=aceptar)
-    btnCambiar.place(x=20, y=30)
-    cambiarnot = Entry(window2)
-    cambiarnot.configure(width="11")
-    cambiarnot.place(x=40, y=30)
 
 #-----------------------BOTON OPCIONES----------------------------------------------------------------------------------------------
 btonPROM=Button(window, width="20", height="2", text="PROMEDIO")
