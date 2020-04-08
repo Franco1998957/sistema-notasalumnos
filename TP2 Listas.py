@@ -66,9 +66,9 @@ def cambiar_Nota_Est3():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(2)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(2,nva_Nota)
             lbl_fila3C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -88,9 +88,9 @@ def cambiar_Nota_Est4():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(3)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(3,nva_Nota)
             lbl_fila4C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -110,9 +110,9 @@ def cambiar_Nota_Est5():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(4)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(4,nva_Nota)
             lbl_fila5C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -132,9 +132,9 @@ def cambiar_Nota_Est6():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(5)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(5,nva_Nota)
             lbl_fila6C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -154,9 +154,9 @@ def cambiar_Nota_Est7():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(6)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(6,nva_Nota)
             lbl_fila7C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -176,9 +176,9 @@ def cambiar_Nota_Est8():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(7)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(7,nva_Nota)
             lbl_fila8C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -198,9 +198,9 @@ def cambiar_Nota_Est9():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(8)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(8,nva_Nota)
             lbl_fila9C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -220,9 +220,9 @@ def cambiar_Nota_Est10():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(9)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(9,nva_Nota)
             lbl_fila10C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -242,9 +242,9 @@ def cambiar_Nota_Est11():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(10)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(10,nva_Nota)
             lbl_fila11C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -264,9 +264,9 @@ def cambiar_Nota_Est12():
     btn.grid (column = 0, row = 2)
     def agregar():
         if getdouble(Entry_1.get()) >= 0 and getdouble(Entry_1.get()) <= 5:
-            notas_Alumnos.pop(0)
+            notas_Alumnos.pop(11)
             nva_Nota = getdouble(Entry_1.get())
-            notas_Alumnos.insert(0,nva_Nota)
+            notas_Alumnos.insert(11,nva_Nota)
             lbl_fila12C3.configure(text=(getdouble(nva_Nota)))
             ventanaIngresar.destroy()
         else:
@@ -281,7 +281,7 @@ def Promedio_de_Notas ():
     Promedio = round( num / len(notas_Alumnos),2)
     return Promedio
 def Show_Promedio ():
-    messagebox.showinfo(title ='PROMEDIO',message = str(Promedio_de_Notas()), icon = 'info')
+    messagebox.showinfo(title ='PROMEDIO',message ='El Promedio es de: ' + str(Promedio_de_Notas()), icon = 'info')
 
 
 
@@ -290,7 +290,7 @@ def nota_Mayor():
     for notas in notas_Alumnos:
         if notas > Promedio_de_Notas() :
             contador += 1
-    messagebox.showinfo(title ='Estudiantes Mayores al Promedio',message = str(contador), icon = 'info')
+    messagebox.showinfo(title ='Estudiantes Mayores al Promedio',message = 'Los Estudiantes Mayores al Promedio son: ' + str(contador), icon = 'info')
 
 
 ventana = Frame(window)
