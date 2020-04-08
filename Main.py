@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[12]:
-
-
 from tkinter import *
 from PIL import ImageTk, Image
 
