@@ -2,13 +2,16 @@ from tkinter import Tk
 from tkinter import messagebox
 from tkinter import *
 
+#variables
 tot=round(float(0),2)
 listaNotas=[round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2),round(float(0),2)]
 
+#ventana
 ventana=Tk()
 ventana.title("Las Notas de un Curso")
 ventana.geometry("800x540")
 
+#canvas
 tit=Canvas(ventana,width=800,height=70, borderwidth=2,relief="raised")
 tit.create_rectangle(0,0,900,900)
 tit.place(x=0,y=0)
@@ -28,9 +31,11 @@ est.place(x=0,y=464)
 titulo=Label(ventana, text="Notas de los Alumnos", font=("Times New Roman",36,"bold"),fg="black")
 titulo.place(x=190,y=3)
 
+#imagen
 imageAlu=PhotoImage(file="scholarship (2).png")
 Label(ventana,image=imageAlu).place(x=180,y=220)
 
+#funciones
 def cambiar1():
     def guardar():
         global listaNotas
@@ -271,6 +276,7 @@ def cambiar12():
         
     ventanaCambiar.mainloop()
 
+#funciones promedio y cantidad mayor
 def promedioCalc():
     global tot
     sumNum=float(0)
@@ -288,7 +294,8 @@ def numMaxProm():
         if num>tot:
             x+=1
     messagebox.showinfo(title="Advertencia",message=(f"El numero de alumnos con notas mayores al promedio son {x}"))
-    
+
+#label estudiantes y notass
 est1=Label(ventana, text="Estudiante 1:", font=("Arial",12), fg="black")
 est1.place(x=520,y=90)
 est2=Label(ventana, text="Estudiante 2:", font=("Arial",12), fg="black")
@@ -339,6 +346,7 @@ not11.place(x=650,y=390)
 not12=Label(ventana, text=listaNotas[11], font=("Arial",12), fg="black")
 not12.place(x=650,y=420)
 
+#botones cambiar
 cambiarNota1=Button(ventana,text="Cambiar", font=("Times New Roman",12),width=10,height=1, command=cambiar1)
 cambiarNota1.place(x=700,y=85)
 cambiarNota2=Button(ventana,text="Cambiar", font=("Times New Roman",12),width=10,height=1, command=cambiar2)
@@ -364,6 +372,7 @@ cambiarNota11.place(x=700,y=385)
 cambiarNota12=Button(ventana,text="Cambiar", font=("Times New Roman",12),width=10,height=1, command=cambiar12)
 cambiarNota12.place(x=700,y=415)
 
+#botones promedio y cantidad mayor
 promedio=Button(ventana,text="Promedio", font=("Times New Roman",12),width=40,height=1, command=promedioCalc)
 promedio.place(x=10,y=480)
 numMayorProm=Button(ventana,text="Numero Mayor al Promedio", font=("Times New Roman",12),width=40,height=1, command=numMaxProm)
