@@ -39,7 +39,7 @@ para guardar la segunda instancia del boton 'Cambiar' que se crea, para cada est
 al boton de un estudiante, y asi poder eliminar ambas instancias una vez se apreta el boton 'Cambiar', para cada estudiante.
 """""
 antecedente=0
-Estudiante_x_Button_= [0]
+Estudiante_x_Button_= [""]
 for i in range(len(triples)+1):
     Estudiante_x_Button_.append(0)
 #Funciones
@@ -93,15 +93,15 @@ def crear_label(Y, numero_estudiante, nota_estudiante):
     def Cambiar():
         global antecedente, Estudiante_x_Button_
         Estudiante_x_Button.destroy()
-        if antecedente==1 and Estudiante_x_Button_[numero_estudiante]!=0:
+        if antecedente==1 and Estudiante_x_Button_[numero_estudiante]!="":
             Estudiante_x_Button_[numero_estudiante].destroy()
-        Nota=IntVar(frame_notas,nota_estudiante)
+        Nota=DoubleVar(frame_notas,nota_estudiante)
         Nota_estudiante_Label.place(x=-5000,y=-5000)
         Nota_estudiante_Entry = Entry(frame_notas,textvariable=Nota)
         Nota_estudiante_Entry.place(x=150,y=Y,width=20)
         def Aceptar():
             global triples, antecedente, Estudiante_x_Button_
-            if Nota.get() in range(0,5):
+            if Nota.get()>=0 and Nota.get()<=5.0:
                 antecedente=1
                 triples[numero_estudiante-1][2]=Nota.get()
                 Nota_estudiante_Label.configure(text=Nota.get())
