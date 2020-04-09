@@ -6,7 +6,7 @@ window = Tk()
 window.title("ESTUDIANTES")
 window.resizable(0,0)
 window.geometry("900x600")
-#------------------------------------------------#
+#-----------------frame-------------------------------#
 miFrame1 = Frame(window,width="450", height="520",bd="10",bg="black")
 miFrame1.grid(row=0,column=0)
 imagen=PhotoImage(file="estudiantes.gif")
@@ -14,15 +14,12 @@ fondo=Label(miFrame1,image=imagen,bg="black").place(x=0,y=0)
 #------------------------------------------------------------------
 miFrame2 = Frame(window,width="450", height="520",bd="10",relief="groove",bg="black")
 miFrame2.grid(row=0,column=1)
-#--------------------------------------------
+#-----------------variables globales---------------------------
 prom=[0.0]
-#-----------------------
 listanotas=list()
 for R in range(12):
     listanotas.append(0.0)
-
-
-
+#-------------Requerimientos------------------
 def calcularPromedio():
     totaldenotas=0.0
     for notaAlumno in listanotas:
@@ -32,8 +29,6 @@ def calcularPromedio():
     messagebox.showinfo("la cantidad de estudiantes mayor al promedio es de :", str(promedioN))
     prom.append(float(promedioN))
 
-
-#-----------------------------------
 def cal_cant_mayor_prom():
     cont=0
     promedio=prom[1]
@@ -42,7 +37,7 @@ def cal_cant_mayor_prom():
             cont+=1
     messagebox.showinfo("la cantidad de estudiantes mayor al promedio es de :", str(cont))
 
-#------------------------------------
+#-----------------crear botones y labels-------------------
 def  crearBotones():
     b=30
     listButton=list()
@@ -52,7 +47,6 @@ def  crearBotones():
         b += 30
         listButton.append(btnCambiar)
     return listButton
-
 def crearLabel():
     y=30
     x=0
@@ -69,7 +63,7 @@ def crearLabel():
         label.place(x=x, y=r)
         r += 30
 
-
+#--------------modificar notas----------------------
 def modificar(i):
         def aceptar():
             nota = float(nuevanota.get())
@@ -86,22 +80,19 @@ def modificar(i):
         btnCambiar.place(x=50, y=90)
         nuevanota = Entry(window2,width="11")
         nuevanota.place(x=70, y=50)
-
-
-
-        window2.title("ESTUDIANTES")
+        window2.title("cambiar nota")
         window2.resizable(0, 0)
 
 
-#-----------------------BOTON OPCIONES----------------------------------------------------------------------------------------------
+#-----------------------_______BOTONES DE REQUERIMIENTOS------------------------------------------
 btonPROM=Button(window, width="20", height="2", text="PROMEDIO",command=calcularPromedio)
 btonPROM.place(x=350,y=550)
 btonPROM=Button(window, width="20", height="2", text="Mayor al del promedio",command=cal_cant_mayor_prom)
 btonPROM.place(x=500,y=550)
-#---------------------------------------LISTAINTERFAZ----------------------------------------------------------------------------
+#---------------------------------------LISTAINTERFAZ-----------------------------------------
 listacrearlbl=crearLabel()
 listabotones=crearBotones()
-#---------------------------------------------------------------------------------------------------------------------
+#-----------------------esto se debe de hacer para interactuar con la nota de cada estudiante-------------------------------------------
 listabotones[0].config(command=lambda:modificar(0) )
 listabotones[1].config(command=lambda:modificar(1) )
 listabotones[2].config(command=lambda:modificar(2) )
@@ -114,6 +105,4 @@ listabotones[8].config(command=lambda:modificar(8) )
 listabotones[9].config(command=lambda:modificar(9) )
 listabotones[10].config(command=lambda:modificar(10) )
 listabotones[11].config(command=lambda:modificar(11) )
-
-
 window.mainloop()
